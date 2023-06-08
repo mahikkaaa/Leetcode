@@ -1,0 +1,29 @@
+class Solution {
+    List<Integer> inOrder=new ArrayList<Integer>();
+    
+    public boolean findTarget(TreeNode root, int k) {
+        
+        dfs(root,inOrder);
+        
+        Map<Integer,Boolean> mp=new HashMap<>();
+        
+        for(int x:inOrder){
+            
+            if(mp.containsKey(k-x)) return true;
+            
+            mp.put(x,true);
+        }
+        
+        return false;
+        
+    }
+    
+    public void dfs(TreeNode root,List<Integer> res){
+        
+        if(root==null) return;
+        
+        dfs(root.left,res);
+        res.add(root.val);
+        dfs(root.right,res);
+    }
+}
