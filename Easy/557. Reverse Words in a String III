@@ -1,0 +1,21 @@
+/ class Solution {
+//     public String reverseWords(String s) {        
+//         String x = "";        
+//         for(String t : s.split(" ")) 
+//             x += new StringBuilder(t).reverse().toString()+" ";
+//         return x.trim();
+//     }
+// }
+
+
+class Solution {
+    public String reverseWords(String s) { 
+        String x = "";
+        for(String t : s.split(" ")){
+            x+= new StringBuilder(t).reverse().toString()+" ";
+        }
+        return x.trim();
+
+
+    }
+}
