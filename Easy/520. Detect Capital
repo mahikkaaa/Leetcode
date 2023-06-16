@@ -1,0 +1,16 @@
+class Solution {
+    public boolean detectCapitalUse(String word) {
+        String sentence = word;
+        boolean ans = false;
+        
+        if (sentence.toUpperCase().equals(word)) {
+            ans = true; 
+        } else if (sentence.toLowerCase().equals(word)) {
+            ans = true; 
+        } else if (Character.isUpperCase(sentence.charAt(0)) && sentence.substring(1).toLowerCase().equals(sentence.substring(1))) {
+            ans = true; 
+        }
+        
+        return ans;
+    }
+}
