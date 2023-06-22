@@ -8,7 +8,7 @@ To provide a comprehensive set of solutions, I have utilized multiple programmin
 
 - Java
 
-By using different programming languages, I aim to demonstrate the versatility of problem-solving approaches and provide solutions that cater to a diverse audience of developers.
+By using Java programming language, I aim to demonstrate the versatility of problem-solving approaches and provide solutions that cater to a diverse audience of developers.
 
 
 ## Contributing
