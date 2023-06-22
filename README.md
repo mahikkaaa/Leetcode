@@ -4,7 +4,7 @@ This repository serves as a collection of my solutions to various LeetCode probl
 
 ## Languages Used
 
-To provide a comprehensive set of solutions, I have utilized multiple programming languages in this repository. Currently, the solutions are available in the following languages:
+To provide a comprehensive set of solutions, I have utilized multiple programming languages in this repository. Currently, the solutions are available in the following language:
 
 - Java
 
