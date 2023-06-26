@@ -1,0 +1,14 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        String s = Integer.toString(x);
+        int n = s.length();
+            String reverse ="";
+                for(int i =n-1; i>=0; i--){
+                    reverse+=s.charAt(i);
+                }
+                
+                return s.equals(reverse);
+            
+        }
+    
+}
