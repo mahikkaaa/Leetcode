@@ -1,0 +1,17 @@
+//The question is asking if it is possible to reach the last index of an array given a set of maximum jump lengths.
+class Solution{
+    public boolean canJump(int[] nums){
+        //The idea is to maintain a boolean array reachable, where nums[i] is True if it is possible to reach index i from the start index, and False otherwise. 
+        int arrival =0;
+        if(nums.length<=1){
+            return true; //directly returning true if length of nums is less than or equal to 1
+        }
+        for(int i=0; i<=arrival; i++){
+            arrival = Math.max(arrival, i+nums[i]); //Updates the value of arrival to the max(arrival, i + nums[i]). This means that we can reach the maximum of arrival and the index i plus the maximum jump length at index i.
+            if(arrival>=nums.length-1){  //If arrival is >=(nums.length-1), then we can reach the last index, hence True.
+                return true;
+            }
+        }
+        return false;
+    }
+}
