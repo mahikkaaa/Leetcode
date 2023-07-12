@@ -1,0 +1,11 @@
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode curr, TreeNode data1, TreeNode data2) {
+        if (data1.val > curr.val && data2.val > curr.val) {
+            return lowestCommonAncestor(curr.right, data1, data2);
+        } else if (data1.val < curr.val && data2.val < curr.val) {
+            return lowestCommonAncestor(curr.left, data1, data2);
+        } else {
+            return curr;
+        }
+    }
+}
