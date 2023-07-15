@@ -1,0 +1,34 @@
+class Solution {
+    public void swap(TreeNode root) {
+        if(root==null)
+            return;
+        
+		//Swapping the right and left child of the passed root if both are null
+        if(root.left!=null && root.right!=null) {
+            TreeNode temp = root.left;
+            root.left = root.right;
+            root.right = temp;
+        }
+		//Swapping the right and left child of the passed root if left child is null and right not null
+        else if(root.left==null && root.right!=null) {
+            root.left = root.right;
+            root.right = null;
+        }
+		//Swapping the right and left child of the passed root if right child is null and left not null
+        else if(root.left!=null && root.right==null) {
+            root.right = root.left;
+            root.left = null;
+        }
+        
+		//Recursively calling the left child tree
+        swap(root.left);
+		//Recursively calling the right child tree
+        swap(root.right);
+    }
+    public TreeNode invertTree(TreeNode root) {
+	//swapping function
+        swap(root);
+		//Returning root of the tree as the root remains the same
+        return root;
+    }
+}
