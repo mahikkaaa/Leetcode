@@ -1,0 +1,8 @@
+import java.math.BigInteger;
+
+class Solution {
+    public String addBinary(String a, String b) {
+	//  BigInteger(a, 2) takes "a String" and process it as a binary input. Then, add() of BigInteger adds both converted a and b.
+        return (new BigInteger(a, 2)).add(new BigInteger(b, 2)).toString(2);
+    }
+}
