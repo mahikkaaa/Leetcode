@@ -1,0 +1,13 @@
+class Solution {
+    public String sortSentence(String s) {
+        String[] strarray = s.split(" ");
+        String[] ans = new String[strarray.length];
+
+        for(String str:strarray){
+            int k = str.length();
+            int index = str.charAt(k-1)-'0'-1;
+            ans[index] = str.substring(0, k-1);
+        }
+        return String.join(" ", ans);
+    }
+}
