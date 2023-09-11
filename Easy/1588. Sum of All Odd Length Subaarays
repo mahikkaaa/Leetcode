@@ -1,0 +1,25 @@
+class Solution{
+    public int sumOddLengthSubarrays(int[] arr) {
+        int sum = 0;
+        for(int num: arr){
+            sum+=num;
+        }
+        if(arr.length<3){
+            return sum;
+        }
+        int len=3;
+        while(len<=arr.length){
+            int currsum = 0;
+            for(int i =0; i<len; i++){
+                currsum+=arr[i];
+            }
+            sum+=currsum;
+            for(int i=len; i<arr.length; i++){
+                currsum+=arr[i]-arr[i-len];
+                sum+=currsum;
+            }
+            len+=2;
+        }
+        return sum;
+}
+}
