@@ -1,0 +1,56 @@
+class Solution {
+    public String reformatDate(String date) {
+        String arr[] = date.split(" ");
+        StringBuilder sb = new StringBuilder();
+        if(arr[0].length()==4){
+            arr[0]=arr[0].substring(0,2);
+        }
+        else{
+            arr[0]=arr[0].substring(0,1);
+            arr[0]="0".concat(arr[0]);
+        }
+        if(arr[1].equals("Jan")){
+            arr[1]="01";
+        }
+        else if(arr[1].equals("Feb")){
+            arr[1]="02";
+        }
+        else if(arr[1].equals("Mar")){
+            arr[1]="03";
+        }
+        else if(arr[1].equals("Apr")){
+            arr[1]="04";
+        }
+        else if(arr[1].equals("May")){
+            arr[1]="05";
+        }
+        else if(arr[1].equals("Jun")){
+            arr[1]="06";
+        }
+        else if(arr[1].equals("Jul")){
+            arr[1]="07";
+        }
+        else if(arr[1].equals("Aug")){
+            arr[1]="08";
+        }
+        else if(arr[1].equals("Sep")){
+            arr[1]="09";
+        }
+        else if(arr[1].equals("Oct")){
+            arr[1]="10";
+        }
+        else if(arr[1].equals("Nov")){
+            arr[1]="11";
+        }
+        else{
+            arr[1]="12";
+        }
+        sb.append(arr[2]);
+        sb.append("-");
+        sb.append(arr[1]);
+        sb.append("-");
+        sb.append(arr[0]);
+        String str = sb.toString();
+        return str;
+    }
+}
