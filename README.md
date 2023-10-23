@@ -7,6 +7,8 @@ This repository serves as a collection of my solutions to various LeetCode probl
 To provide a comprehensive set of solutions, I have utilized multiple programming languages in this repository. Currently, the solutions are available in the following language:
 
 - Java
+- Python
+- SQL
 
 By using Java programming language, I aim to demonstrate the versatility of problem-solving approaches and provide solutions that cater to a diverse audience of developers.
 
